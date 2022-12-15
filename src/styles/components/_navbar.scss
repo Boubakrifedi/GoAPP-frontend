@@ -1,0 +1,115 @@
+nav {
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+  box-shadow: 18px 1px 0px $color-1, 22px 4px 0px 0px $shadow;
+  z-index: 10;
+  top: 0;
+
+  @media screen and (max-width: 1251px) {
+    padding: 0 20px;
+  }
+
+  &::after {
+    content: "";
+    height: 45px;
+    width: 110%;
+    left: -20px;
+    top: 0;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, 0.86);
+    z-index: -8;
+  }
+
+  .nav-container {
+    display: flex;
+    width: 100%;
+    max-width: 1190px;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 45px;
+    align-items: center;
+    #query {
+      padding: 10px 20px;
+      background-color: #ffd0c4;
+    }
+    .searching-container {
+      position: absolute;
+      right: 695px;
+      top: 50px;
+      background: $color-2;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      padding: 20px;
+      width: 270px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        border-radius: 20px
+      }
+      li {
+        margin: 5px 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 68px 1fr;
+        background: $color-4;
+        border-radius: 20px;
+        padding: 16px;
+        box-shadow: 5px 7px 20px 9px #ff7c7732;
+        transition: .2s;
+  
+    }}
+    .logo {
+      display: flex;
+      align-items: center;
+      h3 {
+        transform: translate(15px, 2px);
+        font-size: 1.5rem;
+        font-family: $font-3;
+      }
+      img {
+        height: 26px;
+        width: 26px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35%;
+      justify-content: space-between;
+      font-size: 1.2rem;
+
+      .welcome {
+        transform: translateY(2px);
+
+        @media screen and (max-width: 590px) {
+          display: none;
+        }
+
+        h5 {
+          font-family: $font-3;
+        }
+      }
+
+      li {
+        img {
+          height: 24px;
+          width: 24px;
+          cursor: pointer;
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
