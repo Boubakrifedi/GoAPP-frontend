@@ -1,8 +1,10 @@
 .profil-page {
   margin: 80px auto 0;
   max-width: 1200px;
+  min-height: 800px;
   .status {
     display: grid;
+    padding: 20px;
     .card-container {
       width: 50%;
     }
